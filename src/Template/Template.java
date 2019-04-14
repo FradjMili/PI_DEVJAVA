@@ -25,8 +25,8 @@ public class Template extends Application {
     private Scene scene;
     public Template() throws IOException, InterruptedException {
         instance = this;
-      scene = new Scene(FXMLLoader.load(getClass().getResource("/FXMLFreelancer/AnnoncesFXML.fxml")));
-      //scene = new Scene(FXMLLoader.load(getClass().getResource("/FXMLFreelancer/AjouterAnnonce.fxml")));
+    scene = new Scene(FXMLLoader.load(getClass().getResource("/FXMLFreelancer/AnnoncesFXML.fxml")));
+     // scene = new Scene(FXMLLoader.load(getClass().getResource("/FXMLFreelancer/AjouterAnnonce.fxml")));
       //   scene = new Scene(FXMLLoader.load(getClass().getResource("/FXMLFreelancer/DetailAnnonce.fxml")));
        
       //scene = new Scene(FXMLLoader.load(getClass().getResource("/drapodashbord/stat.fxml")));
