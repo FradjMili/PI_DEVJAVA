@@ -1,0 +1,8 @@
+
+.jfx-hamburger StackPane { -fx-background-color: #fff; }
+.list-cell:empty {
+    -fx-background-color: #fff; 
+}
+.list-cell {
+    -fx-background-color: #fff; 
+}
