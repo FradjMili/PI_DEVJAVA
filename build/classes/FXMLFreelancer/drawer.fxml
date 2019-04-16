@@ -47,7 +47,7 @@
                   </HBox>
                </graphic>
             </JFXButton>
-            <JFXButton fx:id="listAnnonce" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" onAction="#makeProduit" prefHeight="50.0" prefWidth="259.0" ripplerFill="#d6b2fc" style="-fx-background-color: #494747;" textFill="#e4dbdb">
+            <JFXButton fx:id="listAnnonce" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" onAction="#listannonces" prefHeight="50.0" prefWidth="259.0" ripplerFill="#d6b2fc" style="-fx-background-color: #494747;" textFill="#e4dbdb">
                <font>
                   <Font name="Roboto Bold" size="18.0" />
                </font>
@@ -55,7 +55,7 @@
                   <HBox alignment="CENTER" prefHeight="38.0" prefWidth="167.0">
                      <children>
                         <FontAwesomeIconView fill="#e4dbdb" glyphName="LIST" size="30" wrappingWidth="39.0" />
-                        <Label prefHeight="38.0" prefWidth="138.0" text="listAnnonce" textFill="#e4dbdb">
+                        <Label prefHeight="38.0" prefWidth="138.0" text="Les Annonces" textFill="#e4dbdb">
                            <font>
                               <Font name="Roboto Bold" size="18.0" />
                            </font>
@@ -67,7 +67,7 @@
                   </HBox>
                </graphic>
             </JFXButton>
-            <JFXButton fx:id="panier" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" onAction="#makePanier" prefHeight="50.0" prefWidth="259.0" ripplerFill="#d6b2fc" style="-fx-background-color: #494747;" textFill="#e4dbdb">
+            <JFXButton fx:id="mesdemandes" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" onAction="#mesdemandes" prefHeight="50.0" prefWidth="259.0" ripplerFill="#d6b2fc" style="-fx-background-color: #494747;" textFill="#e4dbdb">
                <font>
                   <Font name="Roboto Bold" size="18.0" />
                </font>
@@ -75,7 +75,7 @@
                   <HBox alignment="CENTER" prefHeight="38.0" prefWidth="167.0">
                      <children>
                         <FontAwesomeIconView fill="#e4dbdb" glyphName="SHOPPING_BASKET" size="30" wrappingWidth="39.0" />
-                        <Label prefHeight="38.0" prefWidth="132.0" text="panier" textFill="#e4dbdb">
+                        <Label prefHeight="38.0" prefWidth="132.0" text="Mes Demandes" textFill="#e4dbdb">
                            <font>
                               <Font name="Roboto Bold" size="18.0" />
                            </font>

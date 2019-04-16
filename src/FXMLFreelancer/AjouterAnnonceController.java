@@ -324,15 +324,16 @@ notif(event);
  
 else
 { 
-   file_image="/images/"+file_image;
+   file_image="/photos/"+file_image;
    ev.setImage(file_image);
         
         
             pathfrom = FileSystems.getDefault().getPath(Current_file.getPath());
-            pathto = FileSystems.getDefault().getPath("C:\\wamp64\\www\\photos"+Current_file.getName());
-            Path targetDir = FileSystems.getDefault().getPath("C:\\wamp64\\www\\photos");
-        System.out.println(targetDir);
-                    Files.copy(pathfrom, pathto,StandardCopyOption.REPLACE_EXISTING);
+            pathto = FileSystems.getDefault().getPath("C:\\wamp64\\www\\photos\\"+Current_file.getName());
+        
+            Path targetDir = FileSystems.getDefault().getPath("C:\\wamp64\\www\\photos\\");
+                   
+        Files.copy(pathfrom, pathto,StandardCopyOption.REPLACE_EXISTING);
     
     
 msE.AjouterAnnonce(ev);
@@ -348,7 +349,7 @@ msE.AjouterAnnonce(ev);
              });
      n.showConfirm();
      
-        Template.Template.getInstance().changescene(new Scene(FXMLLoader.load(getClass().getResource("/GUI/MyMenuFXML.fxml"))));             
+        Template.Template.getInstance().changescene(new Scene(FXMLLoader.load(getClass().getResource("/FXMLFreelancer/MenuClient.fxml"))));             
 
 }  
         
@@ -359,7 +360,6 @@ msE.AjouterAnnonce(ev);
 
     /****************************/
    
-    /***********************/
     
   
     

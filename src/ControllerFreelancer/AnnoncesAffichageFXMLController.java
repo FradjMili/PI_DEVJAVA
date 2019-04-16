@@ -75,6 +75,8 @@ public class AnnoncesAffichageFXMLController implements Initializable {
     private JFXHamburger hamburger;
     @FXML
     private TextField rechercher;
+    
+    public String recherche="";
     /**
      * Initializes the controller class.
      */
@@ -121,11 +123,18 @@ public class AnnoncesAffichageFXMLController implements Initializable {
     public void getShowPane()
     {
         List <Annonce> AllProducts  = new ArrayList();
-      
+       if(recherche.equals("")){
             for (Annonce p:service_pr.listAnnonce())
         {
             AllProducts.add(p);
+        }}
+       else{
+         for (Annonce p:service_pr.listAnnonceRecherche(recherche))
+        {
+            AllProducts.add(p);
         }
+       
+       }
               System.out.println(AllProducts); 
         int i=0;
         int j=0;
@@ -360,5 +369,11 @@ public class AnnoncesAffichageFXMLController implements Initializable {
                     return pane;
     }
 
-  
+   @FXML
+    private void search(KeyEvent event) {
+        
+        recherche=rechercher.getText();
+        getShowPane();
+        
+    }
 } 

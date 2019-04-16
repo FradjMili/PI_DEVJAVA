@@ -80,16 +80,16 @@ public class drawerController implements Initializable {
     }
 
     @FXML
-    private void makeProduit(ActionEvent event) throws IOException {
-        Template.getInstance().changescene(new Scene(FXMLLoader.load(getClass().getResource("/drapodashbord/produitsFXML.fxml"))));             
-
+    private void listannonces(ActionEvent event) throws IOException {
+        Template.getInstance().changescene(new Scene(FXMLLoader.load(getClass().getResource("/FXMLFreelancer/AnnoncesFXML.fxml"))));         
+   
     }
 
 
     @FXML
-    private void makePanier(ActionEvent event) throws IOException {
-    Template.getInstance().changescene(new Scene(FXMLLoader.load(getClass().getResource("/drapodashbord/cartpage.fxml"))));             
-
+    private void mesdemandes(ActionEvent event) throws IOException {
+    
+        Template.getInstance().changescene(new Scene(FXMLLoader.load(getClass().getResource("/FXMLFreelancer/Mesdemandes.fxml"))));  
     }
 
 
