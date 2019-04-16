@@ -25,6 +25,7 @@ import java.util.logging.Logger;
  */
 public class ServiceDemande {
     Connection conn;
+ 
     public ServiceDemande() {
         conn = ConnexionDB.getInstance().getCon();
     }
@@ -134,10 +135,10 @@ public class ServiceDemande {
         return ld;
     }
       
-              public List<Demande> malistDemande() {
+              public List<Demande> malistDemande(int userid) {
         List<Demande> ld = new ArrayList<>();
         try {
-            String select = "SELECT  * FROM Demande where iduserA=1;";
+            String select = "SELECT  * FROM Demande where iduserD="+userid+";";
 
             Statement statement1 = conn.createStatement();
 

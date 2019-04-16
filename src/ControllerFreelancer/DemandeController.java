@@ -169,7 +169,7 @@ public class DemandeController implements Initializable {
     {
         List <Demande> AllProducts  = new ArrayList();
       
-            for (Demande p:service_dm.malistDemande())
+            for (Demande p:service_dm.malistDemande(1))
         {
             AllProducts.add(p);
         }
@@ -283,7 +283,7 @@ public class DemandeController implements Initializable {
                                 nomt.setStyle("-fx-font-weight: bold;-fx-fill : #ce3b67");
                               
                             t1.setOnMouseClicked((MouseEvent event) -> {
-                                
+                              //  utils.Sms.send();
                                 p3.setEtatd(2);
                            service_dm.validerDemande(p3);
                                     try {  
@@ -311,7 +311,7 @@ public class DemandeController implements Initializable {
         pane2.setStyle(" -fx-border-radius: 10 ;-fx-border-color: #383d3b ;-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 8, 0, 0, 0); ");
                             
                    
-                        JFXButton t1=new JFXButton("Postuler");    
+                        JFXButton t1=new JFXButton("Valider");    
                        
                         t1.setStyle("-fx-font-weight: bold;");
                         
@@ -357,7 +357,7 @@ public class DemandeController implements Initializable {
                                 nom.setLayoutY(145);
                                 nomt.setStyle("-fx-font-weight: bold;-fx-fill : #ce3b67");
                             t1.setOnMouseClicked((MouseEvent event) -> { 
-                                 
+                                  // utils.Sms.send();
                                   p3.setEtatd(2);
                            service_dm.validerDemande(p3);
                                    try {  
@@ -382,7 +382,7 @@ public class DemandeController implements Initializable {
         pane2.setStyle(" -fx-border-radius: 10;-fx-border-color: #383d3b ;-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 8, 0, 0, 0); ");
                             
                       
-                        JFXButton t1=new JFXButton("Postuler");    
+                        JFXButton t1=new JFXButton("Valider");    
                       
                         t1.setStyle("-fx-font-weight: bold;");
                      
@@ -429,7 +429,9 @@ public class DemandeController implements Initializable {
                                 nom.setLayoutY(145);
                                 nomt.setStyle("-fx-font-weight: bold;-fx-fill : #ce3b67");
                             t1.setOnMouseClicked((MouseEvent event) -> { 
-                                    p3.setEtatd(2);
+                                      
+                                //utils.Sms.send();
+                                p3.setEtatd(2);
                            service_dm.validerDemande(p3);
                                        try {  
                                            Template.getInstance().changescene(new Scene(FXMLLoader.load(getClass().getResource("/FXMLFreelancer/Mesdemandes.fxml"))));

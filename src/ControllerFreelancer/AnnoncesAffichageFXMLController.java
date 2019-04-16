@@ -207,7 +207,7 @@ public class AnnoncesAffichageFXMLController implements Initializable {
                                 hb2.setLayoutX(155);
                                 hb2.setLayoutY(170);
                               
-                                hb2.setStyle("-fx-background-color: #ea7066; ; -fx-background-radius: 0 0 10 0;");
+                                hb2.setStyle("-fx-background-color: #ea7066; ; -fx-background-radius: 10 10 10 10;");
                                 pane2.getChildren().addAll(hb2);
                                 
                                 
@@ -269,7 +269,7 @@ public class AnnoncesAffichageFXMLController implements Initializable {
                                 hb2.setLayoutX(155);
                                 hb2.setLayoutY(170);
                                
-                                hb2.setStyle("-fx-background-color: #ea7066; ; -fx-background-radius: 0 0 10 0;");
+                                hb2.setStyle("-fx-background-color: #ea7066; ; -fx-background-radius: 10 10 10 10;");
                                 pane2.getChildren().addAll(hb2);
                                 Text nomt=new Text("Titre : ");
                                 Label nom = new Label(p3.getTitre());

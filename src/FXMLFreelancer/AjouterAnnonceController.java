@@ -74,6 +74,7 @@ import javafx.stage.StageStyle;
 import javafx.util.Duration;
 import javax.management.Notification;
 import org.controlsfx.control.Notifications;
+import static user.Authentification.user;
 
 
 /**
@@ -167,7 +168,7 @@ public class AjouterAnnonceController implements Initializable {
     @FXML
     private void addButton(ActionEvent event) throws IOException {
         Annonce ev=new Annonce();
-        ev.setIduserA(55);
+        ev.setIduserA(user.connectedUser.getId());
         ev.setEtatannonce(0);
         ev.setTitre(titre.getText());
         ev.setSpeciality(speciality.getText());
@@ -186,7 +187,7 @@ SimpleDateFormat formmat1 = new SimpleDateFormat("yyyy/MM/dd");
 
 String datedebutstring = formmat1.format(datedeb);
 
-String datefinstring = formmat1.format(datedeb);
+String datefinstring = formmat1.format(datefin);
 
            
         
@@ -313,13 +314,23 @@ notif(event);
             alert.setTitle("Attention");
             alert.setContentText("Veuillez saiisr la date de fin de l'annonce !");
             alert.showAndWait();
+         
+   }
+  else if(datefin.equals(datedeb)){
+   
+  
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+         
+            
+            alert.setTitle("Attention");
+            alert.setContentText("Veuillez saiisr la date  une autre fois  !");
+            alert.showAndWait();
         
           
          
 
    
    }
- 
  
  
 else
@@ -386,7 +397,7 @@ msE.AjouterAnnonce(ev);
     
     private void notif(ActionEvent event) {
      Notifications n =Notifications.create().title("")
-             .text("Date début doit étre supériur à date fin ou date début sépérieur au date d'aujourd'hui")
+             .text("Date début doit étre inferieur à date fin ou date début sépérieur au date d'aujourd'hui")
              .graphic(null)
              .position(Pos.CENTER)
              .onAction(new  EventHandler<ActionEvent>() {
