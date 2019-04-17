@@ -12,14 +12,13 @@ import java.sql.Date;
  *
  * @author Ala-y
  */
-
 public class Article implements Serializable {
 
-    private Integer id;   
-    private String titre;   
-    private String auteur;  
-    private String description;    
-    private Date dateCreation;   
+    private Integer id;
+    private String titre;
+    private String auteur;
+    private String description;
+    private Date dateCreation;
     private Date dateEdition;
     private String image;
     private Date updatedAt;
@@ -41,8 +40,8 @@ public class Article implements Serializable {
         this.image = image;
         this.contenu = contenu;
     }
-    
-    public Article(String titre, String auteur, String description, String image, String contenu,int categorieId) {
+
+    public Article(String titre, String auteur, String description, String image, String contenu, int categorieId) {
         this.titre = titre;
         this.auteur = auteur;
         this.description = description;
@@ -50,8 +49,8 @@ public class Article implements Serializable {
         this.contenu = contenu;
         this.categorieId = categorieId;
     }
-    
-    public Article(String titre, String auteur, String description,Date dateCreation,Date dateEdition,String image,Date updatedAt,String contenu,int categorieId) {       
+
+    public Article(String titre, String auteur, String description, Date dateCreation, Date dateEdition, String image, Date updatedAt, String contenu, int categorieId) {
         this.dateCreation = dateCreation;
         this.dateEdition = dateEdition;
         this.updatedAt = updatedAt;
@@ -143,8 +142,6 @@ public class Article implements Serializable {
         this.categorieId = categorieId;
     }
 
-    
-
     @Override
     public int hashCode() {
         int hash = 0;
@@ -167,7 +164,7 @@ public class Article implements Serializable {
 
     @Override
     public String toString() {
-        return "smartstart.entities.Article[ id=" + id + " ]";
+        return "a";
     }
-    
+
 }

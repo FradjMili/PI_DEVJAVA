@@ -23,16 +23,20 @@ public class Routes {
     public static String OffreCell = "/FixIt/Offre/OffreList/OffreCell.fxml";
     public static String Reservations = "/FixIt/Service/ServiceList/ServiceList.fxml";
     public static String ReservationCell = "/FixIt/Service/ServiceList/ServiceList.fxml";
-    public static String HamburgerCss = "/FixIt/StyleSheet/StyleSheet.fxml";
+   // public static String HamburgerCss = "/FixIt/StyleSheet/StyleSheet.fxml";
     public static String ServiceImg = "/FixIt/StyleSheet/offer-img.jpg";
     public static String OffreImg = "/FixIt/StyleSheet/Offre.png";
     public static String Logo = "/FixIt/StyleSheet/logo.png";
     public static String DrawerImg = "/FixIt/StyleSheet/blog.jpg";
     public static String HomeCover = "/FixIt/StyleSheet/HomeCover (2).jpg";
 
+    public static String HamburgerCss = "/smartstart/stylesheet/StyleSheet.fxml";
     public static String ArticleAdd = "/smartstart/gui/Article/ArticleAdd.fxml";
     public static String ArticleList = "/smartstart/gui/Article/ArticleList.fxml";
     public static String ArticleCell = "/smartstart/gui/Article/ArticleCell.fxml";
     public static String ArticleUpdate = "/smartstart/gui/Article/ArticleUpdate.fxml";
+    public static String ArticleConfirmationArticleSupp = "/smartstart/gui/Article/ArticleConfirmationDelete.fxml";
+    public static String ArticleShowArticleInformation = "/smartstart/gui/Article/ShowArticleInfo.fxml";
+    public static String ArticleMail = "/smartstart/gui/Article/mail.fxml";
 
 }

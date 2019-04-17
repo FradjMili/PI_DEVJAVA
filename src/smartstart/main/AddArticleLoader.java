@@ -20,13 +20,12 @@ public class AddArticleLoader extends Application {
   public static  Parent parentPage;
     @Override
     public void start(Stage primaryStage) throws Exception {
-        // primaryStage.initStyle(StageStyle.UNDECORATED);
         this.primaryStage = primaryStage;
-        this.primaryStage.setTitle("FixIt !");
+        this.primaryStage.setTitle("SmartStart !");
         
-         parentPage = FXMLLoader.load(getClass().getResource(Routes.ArticleList));
-       //parentPage = FXMLLoader.load(getClass().getResource(Routes.ArticleAdd));
-        Scene scene = new Scene(parentPage,980,570);
+       parentPage = FXMLLoader.load(getClass().getResource(Routes.ArticleList));
+       //parentPage = FXMLLoader.load(getClass().getResource(Routes.ArticleMail));
+        Scene scene = new Scene(parentPage);
         this.primaryStage.setScene(scene );
         this.primaryStage.show();
     }

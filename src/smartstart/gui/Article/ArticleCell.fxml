@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<GridPane fx:id="GridPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="174.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<GridPane fx:id="GridPane" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="108.0" prefWidth="474.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
   <columnConstraints>
     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
   </columnConstraints>
@@ -18,7 +18,7 @@
     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
   </rowConstraints>
    <children>
-      <AnchorPane id="AnchorPane" fx:id="ServicePane" prefHeight="166.0" prefWidth="486.0" style="-fx-background-color: #f7f7f7;">
+      <AnchorPane id="AnchorPane" fx:id="ServicePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="125.0" prefWidth="487.0" stylesheets="@../../stylesheat/styles.css">
          <children>
             <JFXButton fx:id="Supprimer" layoutX="359.0" layoutY="131.0" prefHeight="25.0" prefWidth="99.0" ripplerFill="WHITE" style="-fx-background-color: #0897ff;" text="Supprimer" textFill="WHITE" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="28.0">
                <font>
@@ -30,23 +30,22 @@
                   <Font name="System Bold" size="12.0" />
                </font>
             </JFXButton>
-            <ImageView fx:id="image" fitHeight="95.0" fitWidth="83.0" layoutX="13.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="13.0" AnchorPane.topAnchor="30.0">
-               <image>
-                  <Image url="@../../../../../../../../informatique/Classe%20S2/PI/Java/Nithal/Pictures/Camera%20Roll/nidhal.jpg" />
-               </image>
-            </ImageView>
-            <Label fx:id="categorie" layoutX="107.0" layoutY="33.0" prefHeight="25.0" prefWidth="152.0" text="Maintenace générale" AnchorPane.leftAnchor="107.0" AnchorPane.topAnchor="33.0">
+            <ImageView fx:id="image" fitHeight="59.0" fitWidth="74.0" layoutX="23.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true" />
+            <Label fx:id="categorie" layoutX="108.0" layoutY="10.0" prefHeight="25.0" prefWidth="152.0" text="Maintenace générale" AnchorPane.leftAnchor="108.0" AnchorPane.topAnchor="10.0">
                <font>
                   <Font size="16.0" />
                </font>
             </Label>
-            <Label fx:id="pro" layoutX="114.0" layoutY="60.0" prefHeight="25.0" prefWidth="120.0" text="Ala" textFill="#ffc107" AnchorPane.leftAnchor="107.0" AnchorPane.topAnchor="60.0">
+            <Label fx:id="pro" layoutX="124.0" layoutY="50.0" prefHeight="25.0" prefWidth="120.0" text="Ala" textFill="#ffc107" AnchorPane.leftAnchor="124.0" AnchorPane.topAnchor="50.0">
                <font>
                   <Font size="16.0" />
                </font>
             </Label>
-            <Label fx:id="date" layoutX="366.0" layoutY="93.0" prefHeight="17.0" prefWidth="99.0" text="20/11/2019" AnchorPane.rightAnchor="21.0" />
+            <Label fx:id="date" layoutX="374.0" layoutY="22.0" prefHeight="17.0" prefWidth="83.0" text="20/11/2019" AnchorPane.rightAnchor="30.0" />
          </children>
+         <GridPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </GridPane.margin>
       </AnchorPane>
    </children>
 </GridPane>

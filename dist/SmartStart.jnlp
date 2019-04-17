@@ -8,10 +8,14 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="SmartStart.jar" size="27386" download="eager" />
+    <jar href="SmartStart.jar" size="14727643" download="eager" />
+    <jar href="lib\commons-lang3-3.0.jar" size="306008" download="eager" />
+    <jar href="lib\javax.mail-1.6.2.jar" size="659031" download="eager" />
     <jar href="lib\javax.persistence_2.1.0.v201304241213.jar" size="164637" download="eager" />
+    <jar href="lib\jfoenix-1.0.0.jar" size="2186636" download="eager" />
     <jar href="lib\jfoenix-8.0.8.jar" size="2708772" download="eager" />
     <jar href="lib\mysql-connector-java-5.1.23-bin.jar" size="834126" download="eager" />
+    <jar href="lib\mysql-connector-java-8.0.15.jar" size="2134905" download="eager" />
   </resources>
   <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="SmartStart" >
     <param name="requiredFXVersion" value="8.0+"/>

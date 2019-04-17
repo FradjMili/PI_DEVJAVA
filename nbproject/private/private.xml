@@ -3,13 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Ala-y/OneDrive/Desktop/3A20/house/JAVA/JustMe/SmartStart/src/smartstart/gui/Article/ArticleUpdateController.java</file>
-            <file>file:/C:/Users/Ala-y/OneDrive/Desktop/3A20/house/JAVA/JustMe/SmartStart/src/smartstart/main/Routes.java</file>
-            <file>file:/C:/Users/Ala-y/OneDrive/Desktop/3A20/house/JAVA/JustMe/SmartStart/src/smartstart/gui/Article/ArticleCellController.java</file>
-            <file>file:/C:/Users/Ala-y/OneDrive/Desktop/3A20/house/JAVA/JustMe/SmartStart/src/smartstart/utils/DataSource.java</file>
-            <file>file:/C:/Users/Ala-y/OneDrive/Desktop/3A20/house/JAVA/JustMe/SmartStart/src/smartstart/gui/Article/ArticleAddController.java</file>
-            <file>file:/C:/Users/Ala-y/OneDrive/Desktop/3A20/house/JAVA/JustMe/SmartStart/src/smartstart/services/ArticleCRUD.java</file>
-            <file>file:/C:/Users/Ala-y/OneDrive/Desktop/3A20/house/JAVA/JustMe/SmartStart/src/smartstart/utils/StaticData.java</file>
+            <file>file:/C:/xampp/htdocs/SmartStart/src/smartstart/gui/Article/ArticleUpdateController.java</file>
+            <file>file:/C:/xampp/htdocs/SmartStart/src/smartstart/gui/Article/ArticleAddController.java</file>
+            <file>file:/C:/xampp/htdocs/SmartStart/src/smartstart/utils/StaticData.java</file>
+            <file>file:/C:/xampp/htdocs/SmartStart/src/smartstart/main/Routes.java</file>
+            <file>file:/C:/xampp/htdocs/SmartStart/src/smartstart/gui/Article/ArticleCellController.java</file>
         </group>
     </open-files>
 </project-private>

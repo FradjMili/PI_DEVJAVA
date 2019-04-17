@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="200.0" prefWidth="480.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="smartstart.gui.Article.ArticleConfirmationDeleteController">
+   <children>
+      <JFXButton fx:id="confirmDeleteButton" alignment="CENTER" blendMode="SRC_ATOP" contentDisplay="CENTER" layoutX="138.0" layoutY="128.0" onAction="#ConfirmAction" prefHeight="42.0" prefWidth="185.0" style="-fx-background-color: #FF6347;" text="Confirm" textAlignment="CENTER" textFill="WHITE" />
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="72.0" layoutY="30.0" prefHeight="69.0" prefWidth="340.0" text="Do you really want to preceed to delete !!!" textAlignment="CENTER" />
+   </children>
+</AnchorPane>

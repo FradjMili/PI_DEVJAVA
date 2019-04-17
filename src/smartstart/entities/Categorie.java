@@ -30,6 +30,10 @@ public class Categorie implements Serializable {
         this.nom = nom;
     }
 
+    public Categorie(String nom) {
+        this.nom = nom;
+    }
+
     public Integer getId() {
         return id;
     }
