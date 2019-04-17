@@ -35,6 +35,7 @@ public class ReclamationServices {
     
     
  public void ajouter(Reclamation r) {
+     
      if(r.getId_ban() == 0){
          String req="INSERT INTO `Reclamation`(`statut`, `text`,`claimerId`,`date`) VALUES (?,?,?,?)";
         Timestamp today = new Timestamp(System.currentTimeMillis());
@@ -63,7 +64,13 @@ public class ReclamationServices {
             preparedStatement.setInt(5,r.getId_ban());
 
             preparedStatement.execute();
+          
+            if (this.verif(r.getId_ban()))
+            {
+                this.supprimerIN(r.getId_ban());
+                System.out.println("user supprimer");
             
+            }
             System.out.println("reclamation ajoutée");
         } catch (SQLException ex) {
             Logger.getLogger(ReclamationServices.class.getName()).log(Level.SEVERE, null, ex);
@@ -71,7 +78,6 @@ public class ReclamationServices {
      }
         
     }
- 
  
  
  
@@ -105,9 +111,33 @@ public class ReclamationServices {
         return myList;
     } 
     
+     public void supprimerIN(int id) throws SQLException {
+
+        Statement st = connection.createStatement();
+        String req = "update fos_user set enabled=0 where id=" + id;
+        st.executeUpdate(req);
+        System.out.println("suppression ok");
+
+    }
+   
     
-    
-    
+   public boolean verif(int ban) throws SQLException{
+       boolean a=false;
+       String requete = "SELECT count(DISTINCT claimerId) FROM `reclamation` WHERE id_ban=? and id_ban!=claimerId";
+            PreparedStatement st = MyConnection.getInstance().getCnx()
+                    .prepareStatement(requete);
+            st.setInt(1, ban);
+            ResultSet rs = st.executeQuery();
+             while (rs.next()) {
+                 if (rs.getInt(1)>2)
+                     a=true;
+             }
+             return a;
+             
+            
+   }
+   
+   
     
     
     

@@ -68,6 +68,7 @@ public class Ajout_reclamationController implements Initializable {
     
  @FXML
  private void ajouterRec(ActionEvent event) throws IOException {
+     
      Reclamation r;
      if (statut.getValue().equals("other")){
          r =new Reclamation (statut.getValue().toString(),text.getText(),U2,liste.getValue().getId() );

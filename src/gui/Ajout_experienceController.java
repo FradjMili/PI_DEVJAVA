@@ -214,7 +214,7 @@ Experiences ex =new Experiences (titre,date1,date2,text,U2);
         ExperienceServices po =new ExperienceServices();
        po.ajouter(ex);
            }
-        
+      
         }
        FXMLLoader loader = new FXMLLoader(getClass().getResource("Ajout_competence.fxml"));
                         Parent root = (Parent) loader.load();

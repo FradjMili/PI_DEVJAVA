@@ -76,5 +76,36 @@ public class CompetenceServices {
         }
         return co;
         
-    }       
+    }    
+     
+     
+      public void modifierComp(Competences comp) throws SQLException {
+        Statement st = connection.createStatement();
+        String req = "UPDATE `competences` SET `nom_competence`=?,`nom_certif`=?,"
+                + "`langues`=?";
+
+        PreparedStatement ste = connection.prepareStatement(req);
+
+        ste.setString(1, comp.getNomCompetence());
+        ste.setString(2, comp.getNomCertif());
+       
+        ste.setString(3, comp.getLangues());
+      
+
+        System.out.println(ste);
+        ste.executeUpdate();
+
+    }
+      
+       
+    public void supprimerCO(int id) throws SQLException {
+        
+        
+            Statement st = connection.createStatement();
+            String req = "delete from competences where id=" + id;
+            st.executeUpdate(req);
+            System.out.println("suppression ok");
+        
+
+    }
 }

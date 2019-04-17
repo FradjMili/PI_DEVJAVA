@@ -36,8 +36,6 @@ public class Ajout_competenceController implements Initializable {
     private TextField certificats;
     @FXML
     private TextField langues;
-    @FXML
-    private Button finish_cv;
 
     /**
      * Initializes the controller class.
@@ -46,6 +44,8 @@ public class Ajout_competenceController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }  
+    
+    
     @FXML
     private void ajouter_competence(ActionEvent event) throws IOException {
         
@@ -77,5 +77,6 @@ Competences c =new Competences(comp,certif,lan,U2);
     
     
     }
+
     
 }

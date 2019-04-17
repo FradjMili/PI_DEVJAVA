@@ -8,7 +8,9 @@ package services;
 import com.itextpdf.text.Document;
 import com.itextpdf.text.DocumentException;
 import com.itextpdf.text.Paragraph;
+import com.itextpdf.text.pdf.PdfPTable;
 import com.itextpdf.text.pdf.PdfWriter;
+import com.mysql.jdbc.ResultSetMetaData;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.sql.Connection;
@@ -30,12 +32,19 @@ public class Pdf {
         
        Statement st = connection.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
        ResultSet rs=st.executeQuery("select * from experiences");
+        ResultSetMetaData rsmd = (ResultSetMetaData) rs.getMetaData();
+        int col=rsmd.getColumnCount();
        rs.first();
        
         Document d = new Document();
-        PdfWriter.getInstance(d,new FileOutputStream("ichrakPDF.pdf"));
+        PdfWriter.getInstance(d,new FileOutputStream("ichrakkkkPDF.pdf"));
+        PdfPTable pt = new PdfPTable(col);
         d.open();
+        
         d.add( new Paragraph("bonjour ferfer"));
+        pt.addCell(""+rs.getString(1));
+        // pt.addCell(""+rs.getString());
+        d.add(pt);
         d.close();
     } 
 }

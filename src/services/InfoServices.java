@@ -91,7 +91,7 @@ public class InfoServices {
 
     }
 
-    public void DeleteInfo(int id) throws SQLException {
+    public void supprimerIN(int id) throws SQLException {
 
         Statement st = connection.createStatement();
         String req = "delete from info_g where id=" + id;
@@ -99,5 +99,7 @@ public class InfoServices {
         System.out.println("suppression ok");
 
     }
+   
+ 
 
 }

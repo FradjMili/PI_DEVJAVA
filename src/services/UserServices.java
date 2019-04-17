@@ -25,7 +25,7 @@ public class UserServices implements IUserServices {
  
   public ArrayList<FosUser> afficherUtilisateur() {
         
-        String req = "select * from fos_user ";
+        String req = "select * from fos_user where enabled=1 ";
         ArrayList<FosUser> utilisateurs = new ArrayList<>();
                 
         

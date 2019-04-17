@@ -16,6 +16,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import tools.MyConnection;
 
 /**
@@ -53,8 +55,8 @@ public class ExperienceServices {
     } 
     
       
-    public List<Experiences> afficherExperiences() {
-        List<Experiences> myList = new ArrayList<>();
+    public ObservableList<Experiences> afficherExperiences() {
+      ObservableList<Experiences> myList = FXCollections.observableArrayList();
         
        
         try {
@@ -79,4 +81,17 @@ public class ExperienceServices {
         }
         return myList;
     } 
+    
+    
+    
+    public void supprimerEX(int id) throws SQLException {
+        
+        
+            Statement st = connection.createStatement();
+            String req = "delete from experiences where id=" + id;
+            st.executeUpdate(req);
+            System.out.println("suppression ok");
+        
+
+    }
 }

@@ -2,11 +2,15 @@
 package gui;
 
 import com.itextpdf.text.DocumentException;
+import com.jfoenix.controls.JFXDrawer;
+import com.jfoenix.controls.JFXHamburger;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -15,15 +19,22 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import services.Pdf;
 public class HomeController implements Initializable {
 
    // private Button b_aff;
 
+    @FXML 
+    private JFXDrawer drawer2;
+    @FXML 
+    private JFXHamburger hamburger;
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        
+        initDrawer();
     //   b_aff.setVisible(false);
     }  
     
@@ -93,6 +104,9 @@ public class HomeController implements Initializable {
     @FXML
     private void pdf(ActionEvent event) throws SQLException, FileNotFoundException, DocumentException {
         Pdf p = new Pdf();
+    }
+
+    private void initDrawer() {
     }
      
 }

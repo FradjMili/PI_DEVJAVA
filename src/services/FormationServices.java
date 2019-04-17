@@ -12,6 +12,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import tools.MyConnection;
 
 public class FormationServices {
@@ -48,8 +50,8 @@ public class FormationServices {
     
     
     
-    public List<Formations> afficherFormations() {
-        List<Formations> myList = new ArrayList<>();
+    public ObservableList<Formations> afficherFormations() {
+        ObservableList<Formations> myList = FXCollections.observableArrayList();
         
        
         try {
@@ -76,11 +78,11 @@ public class FormationServices {
     } 
    
    
-    public void supprimerFO(int idPartner) throws SQLException {
+    public void supprimerFO(int id) throws SQLException {
         
         
             Statement st = connection.createStatement();
-            String req = "delete from formations where id=" + idPartner;
+            String req = "delete from formations where id=" + id;
             st.executeUpdate(req);
             System.out.println("suppression ok");
         
