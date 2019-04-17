@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.HomeController">
+   <children>
+      <Button layoutX="59.0" layoutY="86.0" mnemonicParsing="false" onAction="#redirecCV" prefHeight="25.0" prefWidth="139.0" text="cv" />
+      <Button layoutX="369.0" layoutY="86.0" mnemonicParsing="false" onAction="#redirecRE" prefHeight="25.0" prefWidth="128.0" text="reclamation" />
+      <Button layoutX="416.0" layoutY="249.0" mnemonicParsing="false" onAction="#afficherCV" text="afficher CV" />
+      <Button layoutX="172.0" layoutY="249.0" mnemonicParsing="false" onAction="#pdf" text="PDF" />
+   </children>
+</AnchorPane>

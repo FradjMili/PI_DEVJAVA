@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="200.0" prefWidth="200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.ModifIController">
+   <children>
+      <TextField fx:id="nom" layoutX="240.0" layoutY="86.0" />
+      <Label layoutX="172.0" layoutY="90.0" prefHeight="17.0" prefWidth="27.0" text="Nom" />
+      <Label layoutX="158.0" layoutY="136.0" text="Prenom" />
+      <Label layoutX="131.0" layoutY="179.0" text="Date de naissance" />
+      <Label layoutX="152.0" layoutY="222.0" text="telephone" />
+      <Label layoutX="152.0" layoutY="260.0" text="adresse Mail" />
+      <Label layoutX="165.0" layoutY="308.0" text="adresse" />
+      <TextField fx:id="prenom" layoutX="240.0" layoutY="132.0" />
+      <TextField fx:id="tele" layoutX="240.0" layoutY="218.0" />
+      <TextField fx:id="adrMail" layoutX="240.0" layoutY="260.0" />
+      <TextField fx:id="adresse" layoutX="240.0" layoutY="304.0" />
+      <Button fx:id="update" layoutX="263.0" layoutY="354.0" mnemonicParsing="false" onAction="#update" text="enregistrer" />
+      <DatePicker fx:id="date_nais" layoutX="240.0" layoutY="175.0" />
+   </children>
+</AnchorPane>

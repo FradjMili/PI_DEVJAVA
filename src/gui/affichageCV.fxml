@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" nodeOrientation="LEFT_TO_RIGHT" prefHeight="672.0" prefWidth="958.0" style="-fx-background-color: #12112;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.AffichageCVController">
+   <children>
+      <Pane layoutX="-2.0" prefHeight="171.0" prefWidth="958.0" style="-fx-background-color: #00A388;" styleClass="head-background" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="285.0" layoutY="59.0" text="Votre CV" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Label>
+            <Label layoutX="284.0" layoutY="119.0" text="Bienvenue dans notre application" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="39.0" fitWidth="36.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+             
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="71.0" layoutY="82.0" prefHeight="131.0" prefWidth="133.0" style="-fx-background-color: #fff;">
+         <effect>
+            <DropShadow blurType="GAUSSIAN" height="10.0" radius="4.5" width="10.0" />
+         </effect>
+         <children>
+            <ImageView fitHeight="138.0" fitWidth="163.0" layoutX="-4.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/2-03-512.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="230.0" layoutY="213.0" prefHeight="407.0" prefWidth="673.0" style="-fx-background-color: #AABFB9;">
+         <children>
+            <JFXButton layoutX="285.0" layoutY="319.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="30.0" prefWidth="163.0" ripplerFill="WHITE" style="-fx-background-color: #8D7B76;" text="Envoyer " textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXButton>
+            <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="293.0" layoutY="322.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../PiDev_vesion2/src/Media/icons8_Gmail_48px.png" />
+               </image>
+            </ImageView>
+            <TabPane layoutX="35.0" layoutY="14.0" prefHeight="359.0" prefWidth="517.0" style="-fx-background-color: #AABFB9;" tabClosingPolicy="UNAVAILABLE">
+               <tabs>
+                  <Tab fx:id="info" text="informations générales">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #AABFB9;">
+                           <children>
+                              <Label layoutX="312.0" layoutY="34.0" text="Telephone" textFill="WHITE" underline="true">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Text fx:id="phone" layoutX="312.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="132.0" />
+                              <Text fx:id="adresse" layoutX="316.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="132.0" />
+                              <Label layoutX="312.0" layoutY="192.0" text="E-mail" textFill="WHITE" underline="true">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Text fx:id="mail" layoutX="312.0" layoutY="238.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="132.0" />
+                              <Text fx:id="prenom" layoutX="30.0" layoutY="157.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="132.0" />
+                              <Label layoutX="30.0" layoutY="192.0" text="Date de naissance" textFill="WHITE" underline="true">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Text fx:id="dateN" layoutX="30.0" layoutY="238.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="132.0" />
+                              <Label layoutX="30.0" layoutY="106.0" text="Prenom" textFill="WHITE" underline="true">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="30.0" layoutY="29.0" text="Nom" textFill="WHITE" underline="true">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Text fx:id="nom" layoutX="30.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="132.0" />
+                              <Label layoutX="316.0" layoutY="113.0" text="Adresse" textFill="WHITE" underline="true">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="modif1" layoutX="426.0" layoutY="276.0" mnemonicParsing="false" onAction="#modifierInfo" text="modifier" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab fx:id="forma" text="formations">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #AABFB9;">
+                           <children>
+                              <TableView fx:id="formationTable" layoutX="7.0" layoutY="18.0" prefHeight="266.0" prefWidth="509.0">
+                                 <columns>
+                                    <TableColumn fx:id="titre" prefWidth="107.0" text="titre" />
+                                    <TableColumn fx:id="date_debut" prefWidth="118.0" text="date debut" />
+                                    <TableColumn fx:id="date_fin" prefWidth="106.0" text="date fin" />
+                                    <TableColumn fx:id="description" prefWidth="177.0" text="description" />
+                                 </columns>
+                              </TableView>
+                              <Button fx:id="modif2" layoutX="437.0" layoutY="304.0" mnemonicParsing="false" onAction="#modifierF" text="modifier" />
+                              <Button fx:id="suppFor" layoutX="350.0" layoutY="304.0" mnemonicParsing="false" onAction="#supprimerFO" text="supprimer" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab fx:id="ex" text="expériences">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #AABFB9;">
+                           <children>
+                              <TableView fx:id="experienceTable" layoutX="-1.0" layoutY="16.0" prefHeight="276.0" prefWidth="517.0">
+                                 <columns>
+                                    <TableColumn fx:id="titre1" prefWidth="106.0" text="titre" />
+                                    <TableColumn fx:id="date_debut1" prefWidth="99.0" text="date debut" />
+                                    <TableColumn fx:id="date_fin1" prefWidth="128.0" text="date fin" />
+                                    <TableColumn fx:id="description1" prefWidth="186.0" text="description" />
+                                 </columns>
+                              </TableView>
+                              <Button fx:id="modif3" layoutX="443.0" layoutY="292.0" mnemonicParsing="false" onAction="#modifierE" text="modifier" />
+                              <Button fx:id="suppEx" layoutX="366.0" layoutY="292.0" mnemonicParsing="false" onAction="#supprimerEX" text="supprimer" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab fx:id="comp" text="competences">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #AABFB9;">
+                           <children>
+                              <Text fx:id="nom1" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="132.0" />
+                              <Label layoutX="395.0" layoutY="75.0" prefHeight="20.0" prefWidth="59.0" text="Langue" textFill="WHITE" underline="true">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="245.0" layoutY="75.0" text="Certificat" textFill="WHITE" underline="true">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Text fx:id="dateN1" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="132.0" />
+                              <Label layoutX="28.0" layoutY="75.0" text="Competance" textFill="WHITE" underline="true">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Text fx:id="prenom1" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="132.0" />
+                              <Text fx:id="competence" layoutX="58.0" layoutY="151.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                              <Text fx:id="certificat" layoutX="264.0" layoutY="151.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                              <Text fx:id="langue" layoutX="413.0" layoutY="151.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                              <Button fx:id="modif4" layoutX="428.0" layoutY="270.0" mnemonicParsing="false" onAction="#modifierC" text="modifier" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+               </tabs>
+            </TabPane>
+         </children>
+         <effect>
+            <DropShadow color="#014d4c" height="47.69" radius="26.31" width="59.55" />
+         </effect>
+      </Pane>
+   </children>
+</AnchorPane>

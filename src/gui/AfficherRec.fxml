@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.AfficherRecController">
+   <children>
+      <TableView fx:id="reclamationTable" layoutX="44.0" layoutY="23.0" prefHeight="354.0" prefWidth="542.0" AnchorPane.bottomAnchor="23.0" AnchorPane.leftAnchor="44.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="23.0">
+        <columns>
+          <TableColumn fx:id="statut" prefWidth="75.0" text="Statut" />
+            <TableColumn fx:id="contenu" prefWidth="75.0" text="Contenu" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

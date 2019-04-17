@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="535.0" prefWidth="718.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.Ajout_formationController">
+   <children>
+      <DatePicker fx:id="date_debut1" layoutX="233.0" layoutY="50.0" prefHeight="25.0" prefWidth="97.0" />
+      <DatePicker fx:id="date_fin1" layoutX="377.0" layoutY="50.0" prefHeight="25.0" prefWidth="105.0" />
+      <TextField fx:id="text1" layoutX="25.0" layoutY="104.0" prefHeight="25.0" prefWidth="245.0" />
+      <JFXTextField fx:id="titre1" layoutX="37.0" layoutY="50.0" prefHeight="25.0" prefWidth="149.0" />
+      <JFXTextField fx:id="titre2" layoutX="32.0" layoutY="160.0" />
+      <DatePicker fx:id="date_debut2" layoutX="233.0" layoutY="160.0" prefHeight="25.0" prefWidth="119.0" />
+      <DatePicker fx:id="date_fin2" layoutX="400.0" layoutY="160.0" prefHeight="25.0" prefWidth="105.0" />
+      <TextField fx:id="text2" layoutX="25.0" layoutY="216.0" prefHeight="25.0" prefWidth="245.0" />
+      <JFXTextField fx:id="titre3" layoutX="32.0" layoutY="270.0" />
+      <DatePicker fx:id="date_debut3" layoutX="195.0" layoutY="270.0" onAction="#date" prefHeight="25.0" prefWidth="119.0" />
+      <DatePicker fx:id="date_fin3" layoutX="377.0" layoutY="270.0" />
+      <TextField fx:id="text3" layoutX="37.0" layoutY="331.0" prefHeight="25.0" prefWidth="225.0" />
+      <JFXTextField fx:id="titre4" layoutX="32.0" layoutY="394.0" />
+      <TextField fx:id="text4" layoutX="37.0" layoutY="468.0" prefHeight="25.0" prefWidth="225.0" />
+      <DatePicker fx:id="date_debut4" layoutX="206.0" layoutY="407.0" />
+      <DatePicker fx:id="date_fin4" layoutX="430.0" layoutY="407.0" />
+      <Button layoutX="586.0" layoutY="481.0" mnemonicParsing="false" onAction="#ajouter_formation" text="enregistrer" />
+      <Button fx:id="b1" layoutX="571.0" layoutY="50.0" mnemonicParsing="false" onAction="#show" prefHeight="25.0" prefWidth="27.0" />
+      <Button fx:id="b2" layoutX="572.0" layoutY="167.0" mnemonicParsing="false" onAction="#show" prefHeight="25.0" prefWidth="27.0" />
+      <Button fx:id="b3" layoutX="597.0" layoutY="283.0" mnemonicParsing="false" onAction="#show" prefHeight="25.0" prefWidth="27.0" />
+   </children>
+</AnchorPane>
