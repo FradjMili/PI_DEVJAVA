@@ -16,6 +16,13 @@ import java.sql.Date;
 import java.util.List;
 import java.util.Locale;
 
+
+
+import java.util.Properties;  
+import javax.mail.*;  
+import javax.mail.internet.*;  
+  
+
 /**
  *
  * @author USER
@@ -27,39 +34,50 @@ public class PI_DEVJAVA {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-            Annonce a1=new Annonce(1,"speciality","description","titre",500,1);
-            Date dated=new Date(2018, 5, 6);
-            int year =2018-1900;
-              Date datef=new Date(year, 0,20);
-              
-              
-SimpleDateFormat formmat1 = new SimpleDateFormat("yyyy/MM/dd");
+     envoyer();
 
-String formatterdf = formmat1.format(datef);
 
-        System.out.println(formatterdf);    
-
-            Annonce a2 = new Annonce(1, 20, "speciality", formatterdf, formatterdf, "description", "titre", 5, 6);
-      ServiceAnnonce ser1=new ServiceAnnonce();
-      ser1.AjouterAnnonce(a2);
-//      int year=2015;
-//      year=year-1900;
-//        System.out.println(new Date(year, 5, 6));
-//      
-      
-       //ser1.SupprimerAnnonce(36);
-//ser1.modifierAnnonce(50, "aa", "description", "titre", 50, 0);
-//ser1.afficherAnnonce();
-
-//------------------
-Demande d1=new Demande( 10 ,  11 ,  12,  "String", 1 , "String");
- ServiceDemande dem1=new ServiceDemande();
- //dem1.AjouterDemande(d1);
- //dem1.SupprimerDemande(25);
-//dem1.modifierDemande( 10 ,  11 ,  12,  "titre", 1 , "titre");
-//dem1.afficherDemande();
-
-//        System.out.println(ser1.listAnnonce());
+    
     }
+    
+    public static void envoyer()
+    {
+     
+  String host="smtp.gmail.com";  
+  final String user="byounesfiras@gmail.com";//change accordingly  
+  final String password="pinisulaa";//change accordingly  
+    
+  String to="mili.fradj@gmail.com";//change accordingly  
+  
+   //Get the session object  
+   Properties props = new Properties();  
+   props.put("mail.smtp.host",host);  
+   props.put("mail.smtp.auth", "true"); 
+   props.put("mail.smtp.starttls.enable", "true");
+     
+   Session session = Session.getDefaultInstance(props,  
+    new javax.mail.Authenticator() {  
+      protected PasswordAuthentication getPasswordAuthentication() {  
+    return new PasswordAuthentication(user,password);  
+      }  
+    });  
+  
+   //Compose the message  
+    try {  
+     MimeMessage message = new MimeMessage(session);  
+     message.setFrom(new InternetAddress(user));  
+     message.addRecipient(Message.RecipientType.TO,new InternetAddress(to));  
+     message.setSubject("Annonce validée");  
+     message.setText("Cette annonce a été effectué avec succees pour vous , on éspere que vous respectez la date fin");  
+       
+    //send the message  
+     Transport.send(message);  
+  
+     System.out.println("message sent successfully...");  
+   
+     } catch (MessagingException e) {e.printStackTrace();}  
+ }  
+    
+    
     
 }

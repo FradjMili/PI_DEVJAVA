@@ -25,6 +25,7 @@ import java.util.logging.Logger;
  */
 public class ServiceDemande {
     Connection conn;
+ 
     public ServiceDemande() {
         conn = ConnexionDB.getInstance().getCon();
     }
@@ -38,7 +39,7 @@ public class ServiceDemande {
             ps.setInt(2, d.getIduserA());
             ps.setInt(3, d.getIduserD());
             ps.setString(4, d.getTitre());
-            ps.setInt(5, d.getEtatd());
+            ps.setInt(5, 0);
             ps.setString(6, d.getMotivation());
            
             ps.setString(7, d.getDatedebut());
@@ -86,10 +87,30 @@ public class ServiceDemande {
          }
         
         
-     /*     public List<Demande> listDemande() {
+        
+        
+        public void validerDemande(Demande D)
+        {try {
+         String update = "UPDATE Demande SET etatd = ? WHERE id = ?  ";
+         PreparedStatement st2 = conn.prepareStatement(update);
+         st2.setInt(1,D.getEtatd());
+         st2.setInt(2,D.getId());
+         
+         
+         st2.executeUpdate();
+         
+         System.out.println("Modification demande avec succé");
+         
+         } catch(SQLException e){
+         System.out.println(e.getMessage());
+         }
+         
+         }
+        
+          public List<Demande> listDemande() {
         List<Demande> ld = new ArrayList<>();
         try {
-            String select = "SELECT  * FROM Demande ;";
+            String select = "SELECT  * FROM Demande where etatd = 0 AND iduserA=1;";
 
             Statement statement1 = conn.createStatement();
 
@@ -97,11 +118,12 @@ public class ServiceDemande {
 
             while (result.next()) {
                 Demande m = new Demande();
-                m.setTitre(result.getString("titre"));
+                m.setTitre(result.getString("Titre"));
                 m.setMotivation(result.getString("Motivation"));
-               
-               
-
+                m.setDatedebut(result.getString("datedebutD"));
+                m.setDatefin(result.getString("datefinD"));
+                m.setIda(result.getInt("ida"));
+               m.setId(result.getInt("id"));
                 ld.add(m);
 
             }
@@ -111,8 +133,40 @@ public class ServiceDemande {
             System.err.println("VnedorError: " + ex.getErrorCode());
         }
         return ld;
-    }*/
-        public void afficherDemande(){
+    }
+      
+              public List<Demande> malistDemande(int userid) {
+        List<Demande> ld = new ArrayList<>();
+        try {
+            String select = "SELECT  * FROM Demande where iduserD="+userid+";";
+
+            Statement statement1 = conn.createStatement();
+
+            ResultSet result = statement1.executeQuery(select);
+
+            while (result.next()) {
+                Demande m = new Demande();
+                m.setTitre(result.getString("Titre"));
+                m.setMotivation(result.getString("Motivation"));
+                m.setDatedebut(result.getString("datedebutD"));
+                m.setDatefin(result.getString("datefinD"));
+                m.setIda(result.getInt("ida"));
+               m.setId(result.getInt("id"));
+               
+               m.setEtatd(result.getInt("etatd"));
+                ld.add(m);
+
+            }
+        } catch (SQLException ex) {
+            System.err.println("SQLException: " + ex.getMessage());
+            System.err.println("SQLSTATE: " + ex.getSQLState());
+            System.err.println("VnedorError: " + ex.getErrorCode());
+        }
+        return ld;
+    }
+      
+          
+          public void afficherDemande(){
         PreparedStatement pt;
         try {
             pt = conn.prepareStatement("select * from Demande");

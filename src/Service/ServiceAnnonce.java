@@ -33,7 +33,7 @@ public class ServiceAnnonce {
     
          public void AjouterAnnonce(Annonce a) {
        
-        String query="insert into annonces_posts (iduserA,speciality,description,titre,salaire,etatannonce,datedebut,datefin) values (?,?,?,?,?,?,?,?)";
+        String query="insert into annonces_posts (iduserA,speciality,description,titre,salaire,etatannonce,datedebut,datefin,image) values (?,?,?,?,?,?,?,?,?)";
         PreparedStatement ps;
         try {
             ps = ConnexionDB.getInstance().getCon().prepareStatement(query);
@@ -42,11 +42,12 @@ public class ServiceAnnonce {
             ps.setString(3, a.getDescription());
             ps.setString(4, a.getTitre());
             ps.setInt(5, a.getSalaire());
-            ps.setInt(6, a.getEtatannonce());
+            ps.setInt(6,0);
             ps.setString(7,a.getDatedebut());
             
             ps.setString(8, a.getDatefin());
             
+            ps.setString(9, a.getImage());
            
         ps.executeUpdate();
 
@@ -56,15 +57,21 @@ public class ServiceAnnonce {
     
     
     }
-          public void modifierAnnonce(int iduserA,String speciality,String description,String titre,float salaire,int etatannonce){
+          public void modifierAnnonce(Annonce A){
          try {
          String update = "UPDATE annonces_posts SET speciality = ? , "
-         + "description = ? , titre = ? ,salaire  = ? WHERE id = 38  ";
+         + "description = ? , titre = ? ,salaire  = ?,datedebut=?,datefin=? WHERE id = ?  ";
          PreparedStatement st2 = conn.prepareStatement(update);
-         st2.setString(1,speciality);
-         st2.setString(2,description);
-         st2.setString(3,titre);
-         st2.setFloat(4,salaire);
+         st2.setString(1,A.getSpeciality());
+         st2.setString(2,A.getDescription());
+         st2.setString(3,A.getTitre());
+         st2.setInt(4,A.getSalaire());
+         
+         st2.setString(5,A.getDatedebut());
+         
+         st2.setString(6,A.getDatefin());
+         
+         st2.setInt(7,A.getId());
          
          st2.executeUpdate();
          
@@ -124,6 +131,42 @@ public class ServiceAnnonce {
         }
         return lm;
     }
+    
+    
+    
+    public List<Annonce> listAnnonceRecherche(String titre) {
+        List<Annonce> lm = new ArrayList<>();
+        try {
+            String select = "SELECT  * FROM annonces_posts where etatannonce = 0 AND titre LIKE '%"+titre+"%' ;";
+
+            Statement statement1 = conn.createStatement();
+
+            ResultSet result = statement1.executeQuery(select);
+
+            while (result.next()) {
+                Annonce m = new Annonce();
+                m.setIduserA(result.getInt("iduserA"));
+                m.setSpeciality(result.getString("speciality"));
+                m.setDescription(result.getString("description"));
+                m.setTitre(result.getString("titre"));
+                m.setSalaire(result.getInt("salaire"));
+                m.setEtatannonce(result.getInt("etatannonce"));
+                m.setDatedebut(result.getString("datedebut"));
+                m.setDatefin(result.getString("datefin"));
+                 m.setId(result.getInt("id"));
+                
+
+                lm.add(m);
+
+            }
+        } catch (SQLException ex) {
+            System.err.println("SQLException: " + ex.getMessage());
+            System.err.println("SQLSTATE: " + ex.getSQLState());
+            System.err.println("VnedorError: " + ex.getErrorCode());
+        }
+        return lm;
+    }
+    
       public void afficherAnnonce(){
         PreparedStatement pt;
         try {
@@ -196,4 +239,24 @@ public class ServiceAnnonce {
        
           
           return test;}
+
+
+
+          public void validerannonce(int ida){
+         try {
+         String update = "UPDATE annonces_posts SET etatannonce = ?  WHERE id = ?  ";
+         PreparedStatement st2 = conn.prepareStatement(update);
+         st2.setInt(1,1);
+         st2.setInt(2,ida);
+         
+         st2.executeUpdate();
+         
+         System.out.println("Modification demande avec succé");
+         
+         } catch(SQLException e){
+         System.out.println(e.getMessage());
+         }
+         
+         }
+       
 }

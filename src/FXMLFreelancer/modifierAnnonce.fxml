@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="440.0" prefWidth="651.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/10.0.1" fx:controller="FXMLFreelancer.modifierAnnonceController">
+
+    <children>
+      <TextField fx:id="salaire" layoutX="46.0" layoutY="198.0" onKeyReleased="#checkWrittenNumber" prefHeight="31.0" prefWidth="150.0" promptText="Salaire" />
+      <TextField fx:id="speciality" layoutX="362.0" layoutY="54.0" prefHeight="25.0" prefWidth="317.0" promptText="Speciality" />
+      <TextField fx:id="titre" layoutX="46.0" layoutY="54.0" prefHeight="25.0" prefWidth="282.0" promptText="Titre" />
+     
+      
+      <Button layoutX="452.0" layoutY="417.0" mnemonicParsing="false" onAction="#addButton" text="Valider" />
+      <JFXTextArea fx:id="description" focusColor="RED" labelFloat="true" layoutX="58.0" layoutY="253.0" prefHeight="48.0" prefWidth="597.0" promptText="Description" unFocusColor="#debe00" />
+      <ImageView fx:id="image_p" fitHeight="97.0" fitWidth="203.0" layoutX="169.0" layoutY="320.0" onDragDropped="#imageDropped" onDragOver="#imageDragOver" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@drag-and-drop-icon.png" />
+         </image>
+      </ImageView>
+      <JFXDatePicker fx:id="datedeb_ev" defaultColor="#20ff1c" layoutX="51.0" layoutY="137.0" prefHeight="25.0" prefWidth="273.0" promptText="Date début" />
+      <JFXDatePicker fx:id="datefin_ev" defaultColor="RED" layoutX="362.0" layoutY="137.0" prefHeight="25.0" prefWidth="317.0" promptText="Date Fin" />
+      <FontAwesomeIconView fill="#6bf442" glyphName="USD" layoutX="8.0" layoutY="225.0" size="30" wrappingWidth="28.952370643615723" />
+      <FontAwesomeIconView glyphName="MAP_MARKER" layoutX="342.0" layoutY="74.0" size="30.0" text="" wrappingWidth="22.85714292526245" />
+      <FontAwesomeIconView fill="#131dd9" glyphName="BULLHORN" layoutX="8.0" layoutY="71.0" size="30" />
+    
+     
+
+   
+   </children>
+   <cursor>
+      <Cursor fx:constant="DEFAULT" />
+   </cursor>
+   
+</AnchorPane>

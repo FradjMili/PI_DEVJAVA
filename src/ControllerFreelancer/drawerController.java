@@ -55,18 +55,12 @@ public class drawerController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-                              
-                               // imgUser.setStyle("-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 8, 0, 0, 0);");
-
- //                               imgUser.setImage(image2);
-                                
-       
-        // TODO
+ 
     }    
 
     @FXML
     private void makeAccueil(ActionEvent event) throws IOException {
- //       Template.getInstance().changescene(new Scene(FXMLLoader.load(getClass().getResource("/GUI/menuAdmin.fxml"))));             
+        Template.getInstance().changescene(new Scene(FXMLLoader.load(getClass().getResource("/FXMLFreelancer/AnnoncesFXML.fxml"))));             
 
     }
 
@@ -80,16 +74,16 @@ public class drawerController implements Initializable {
     }
 
     @FXML
-    private void makeProduit(ActionEvent event) throws IOException {
-        Template.getInstance().changescene(new Scene(FXMLLoader.load(getClass().getResource("/drapodashbord/produitsFXML.fxml"))));             
-
+    private void listannonces(ActionEvent event) throws IOException {
+        Template.getInstance().changescene(new Scene(FXMLLoader.load(getClass().getResource("/FXMLFreelancer/AnnoncesFXML.fxml"))));         
+   
     }
 
 
     @FXML
-    private void makePanier(ActionEvent event) throws IOException {
-    Template.getInstance().changescene(new Scene(FXMLLoader.load(getClass().getResource("/drapodashbord/cartpage.fxml"))));             
-
+    private void mesdemandes(ActionEvent event) throws IOException {
+    
+        Template.getInstance().changescene(new Scene(FXMLLoader.load(getClass().getResource("/FXMLFreelancer/Mesdemandes.fxml"))));  
     }
 
 

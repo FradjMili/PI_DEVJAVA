@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<StackPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="577.0" prefWidth="522.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FXMLArticle.ArticleUpdateController">
+   <children>
+      <AnchorPane id="AnchorPane" fx:id="mainContainer" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="577.0" prefWidth="521.0" style="-fx-background-color: #fff;" styleClass="custom-pane" stylesheets="@../../../../../../../../informatique/Classe%20S2/PI/Java/Nithal/PI_DEV/src/FixIt/StyleSheet/dark-theme.css">
+         <children>
+            <VBox alignment="CENTER" layoutY="-36.0" prefHeight="577.0" prefWidth="521.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <JFXTextField fx:id="articleTitreTextField" focusColor="BLACK" labelFloat="true" promptText="Titre" unFocusColor="#ffc107">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </JFXTextField>
+                  <JFXTextField fx:id="articleAuteurTextField" focusColor="BLACK" labelFloat="true" layoutX="10.0" layoutY="62.0" promptText="Auteur" unFocusColor="#ffc107">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </JFXTextField>
+                  <JFXTextField fx:id="articleDescriptionTextField" focusColor="BLACK" labelFloat="true" layoutX="35.0" layoutY="83.0" promptText="Description" unFocusColor="#ffc107">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </JFXTextField>
+                  <JFXTextField fx:id="articleContenuTextField" focusColor="BLACK" labelFloat="true" layoutX="25.0" layoutY="199.0" promptText="Contenu" unFocusColor="#ffc107">
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </JFXTextField>
+                  <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="114.0" prefWidth="406.0">
+                     <children>
+                        <Button mnemonicParsing="false" onMouseClicked="#addImage" prefHeight="25.0" prefWidth="121.0" text="Choisir Une Image!!">
+                           <HBox.margin>
+                              <Insets bottom="40.0" left="40.0" right="40.0" top="40.0" />
+                           </HBox.margin>
+                        </Button>
+                        <ImageView fx:id="imageV" fitHeight="96.0" fitWidth="135.0" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets bottom="40.0" left="40.0" right="40.0" top="40.0" />
+                           </HBox.margin>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <ComboBox fx:id="articleCategorieComboBox" prefHeight="25.0" prefWidth="206.0" promptText="Categories" />
+                  <HBox alignment="CENTER" prefHeight="47.0" prefWidth="404.0" spacing="30.0">
+                     <children>
+                        <JFXButton fx:id="saveAddArticleButton" onAction="#UpdateArticle" prefHeight="66.0" prefWidth="100.0" text="Save" />
+                        <JFXButton fx:id="cancelAddArticleButton" layoutX="10.0" layoutY="10.0" onAction="#cancel" prefHeight="66.0" prefWidth="100.0" text="Cancel" />
+                     </children>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+               </padding>
+               <stylesheets>
+                  <URL value="@../../../../../../../../informatique/Classe%20S2/PI/Java/Nithal/PI_DEV/src/FixIt/StyleSheet/StyleSheet.css" />
+                  <URL value="@../../../../../../../../informatique/Classe%20S2/PI/Java/Nithal/PI_DEV/src/FixIt/StyleSheet/dark-theme.css" />
+               </stylesheets>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
